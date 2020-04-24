@@ -116,7 +116,6 @@ return(_node);
             xmlFreeNode(_node);
             }
 
-        _node->_private = NULL;
         _node = NULL;
         }
     }
