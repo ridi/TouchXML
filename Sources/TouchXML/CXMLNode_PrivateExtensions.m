@@ -112,9 +112,6 @@ return(_node);
         {
         if (_freeNodeOnRelease)
             {
-            if (_node->_private != nil) {
-                CFBridgingRelease(_node->_private);
-            };
             xmlUnlinkNode(_node);
             xmlFreeNode(_node);
             }
