@@ -110,6 +110,9 @@ return(_node);
     {
     if (_node)
         {
+        if (_node->_private == (__bridge void *)self)
+            _node->_private = NULL;
+
         if (_freeNodeOnRelease)
             {
             xmlUnlinkNode(_node);
