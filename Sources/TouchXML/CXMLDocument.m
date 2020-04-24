@@ -73,7 +73,7 @@
             {
                 _node = (xmlNodePtr)theDoc;
                 NSAssert(_node->_private == NULL, @"TODO");
-                _node->_private = (__bridge void *)self; // Note. NOT retained (TODO think more about _private usage)
+                _node->_private = CFBridgingRetain(self); // Note. NOT retained (TODO think more about _private usage)
             }
             else
             {
@@ -151,7 +151,8 @@
             if (theDoc != NULL && xmlDocGetRootElement(theDoc) != NULL)
             {
                 _node = (xmlNodePtr)theDoc;
-                _node->_private = (__bridge void *)self; // Note. NOT retained (TODO think more about _private usage)
+                if (_node->_private != nil) { CFBridgingRelease(_node->_private); }
+                _node->_private = CFBridgingRetain(self); // Note. NOT retained (TODO think more about _private usage)
             }
             else
             {
