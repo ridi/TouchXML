@@ -56,7 +56,7 @@ static int MyXmlOutputCloseCallback(void * context);
 #pragma unused (zone)
 xmlNodePtr theNewNode = xmlCopyNode(_node, 1);
 CXMLNode *theNode = [[[self class] alloc] initWithLibXMLNode:theNewNode freeOnDealloc:YES];
-theNewNode->_private = (__bridge void *)theNode;
+theNewNode->_private = (__bridge_retained void *)theNode;
 return(theNode);
 }
 

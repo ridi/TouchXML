@@ -71,7 +71,7 @@ return(self);
 
             [[theXMLDocument nodePool] addObject:theNode];
 
-            theNode->_node->_private = (__bridge void *)theNode;
+            theNode->_node->_private = (__bridge_retained void *)theNode;
         }
     }
     return(theNode);
@@ -112,6 +112,9 @@ return(_node);
         {
         if (_freeNodeOnRelease)
             {
+            if (_node->_private != nil) {
+                CFBridgingRelease(_node->_private);
+            };
             xmlUnlinkNode(_node);
             xmlFreeNode(_node);
             }
