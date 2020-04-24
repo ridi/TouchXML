@@ -1,5 +1,5 @@
 //
-//  BasicTests.h
+//  TidyTests.m
 //  TouchCode
 //
 //  Created by Jonathan Wight on 03/07/08.
@@ -29,11 +29,21 @@
 //  authors and should not be interpreted as representing official policies, either expressed
 //  or implied, of toxicsoftware.com.
 
-#import <XCTest/XCTest.h>
+#import "TidyTests.h"
 
+@import TouchXML;
 
-@interface BasicTests : XCTestCase {
+@implementation TidyTests
 
+- (void)test_basicXMLTest
+{
+NSError *theError = NULL;
+CXMLDocument *theXMLDocument = [[CXMLDocument alloc] initWithXMLString:@"<foo></bar>" options:CXMLDocumentTidyXML error:&theError];
+XCTAssertNotNil(theXMLDocument);
+XCTAssertNil(theError);
+XCTAssertNotNil([theXMLDocument rootElement]);
+XCTAssertEqual([theXMLDocument rootElement], [theXMLDocument rootElement]);
+XCTAssertEqualObjects([[theXMLDocument rootElement] name], @"foo");
 }
 
 @end

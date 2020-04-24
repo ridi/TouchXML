@@ -1,8 +1,8 @@
 //
-//  NamespaceTests.h
-//  TouchXML
+//  BasicTests.h
+//  TouchCode
 //
-//  Created by Jonathan Wight on 1/1/2000.
+//  Created by Jonathan Wight on 03/07/08.
 //  Copyright 2011 toxicsoftware.com. All rights reserved.
 //
 //  Redistribution and use in source and binary forms, with or without modification, are
@@ -29,10 +29,10 @@
 //  authors and should not be interpreted as representing official policies, either expressed
 //  or implied, of toxicsoftware.com.
 
-#define USE_APPLICATION_UNIT_TEST 1
+@import XCTest;
 
-#import <XCTest/XCTest.h>
+@interface BasicTests : XCTestCase {
 
-@interface NamespaceTests : XCTestCase 
+}
 
 @end

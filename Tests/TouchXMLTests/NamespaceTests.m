@@ -31,9 +31,7 @@
 
 #import "NamespaceTests.h"
 
-#import "CXMLDocument.h"
-#import "CXMLElement.h"
-#import "CXMLNode.h"
+@import TouchXML;
 
 @implementation NamespaceTests 
 	

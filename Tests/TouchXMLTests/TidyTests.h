@@ -1,8 +1,8 @@
 //
-//  TouchXML.h
+//  TidyTests.h
 //  TouchCode
 //
-//  Created by Jonathan Wight on 07/11/08.
+//  Created by Jonathan Wight on 03/07/08.
 //  Copyright 2011 toxicsoftware.com. All rights reserved.
 //
 //  Redistribution and use in source and binary forms, with or without modification, are
@@ -29,20 +29,10 @@
 //  authors and should not be interpreted as representing official policies, either expressed
 //  or implied, of toxicsoftware.com.
 
-//! Project version number for TouchXML.
-FOUNDATION_EXPORT double TouchXMLVersionNumber;
+@import XCTest;
 
-//! Project version string for TouchXML.
-FOUNDATION_EXPORT const unsigned char TouchXMLVersionString[];
+@interface TidyTests : XCTestCase {
 
-// In this header, you should import all the public headers of your framework using statements like #import <TouchXML/PublicHeader.h>
+}
 
-#import <TouchXML/CXMLDocument.h>
-#import <TouchXML/CXMLDocument_CreationExtensions.h>
-#import <TouchXML/CXMLElement.h>
-#import <TouchXML/CXMLElement_CreationExtensions.h>
-#import <TouchXML/CXMLElement_ElementTreeExtensions.h>
-#import <TouchXML/CXMLNode.h>
-#import <TouchXML/CXMLNode_CreationExtensions.h>
-#import <TouchXML/CXMLNode_XPathExtensions.h>
-#import <TouchXML/CXMLUnsupportedNode.h>
+@end

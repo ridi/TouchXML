@@ -1,8 +1,8 @@
 //
-//  TidyTests.m
+//  TouchXML.h
 //  TouchCode
 //
-//  Created by Jonathan Wight on 03/07/08.
+//  Created by Jonathan Wight on 07/11/08.
 //  Copyright 2011 toxicsoftware.com. All rights reserved.
 //
 //  Redistribution and use in source and binary forms, with or without modification, are
@@ -29,21 +29,22 @@
 //  authors and should not be interpreted as representing official policies, either expressed
 //  or implied, of toxicsoftware.com.
 
-#import "TidyTests.h"
+#import <Foundation/Foundation.h>
 
-#import "TouchXML.h"
+//! Project version number for TouchXML.
+FOUNDATION_EXPORT double TouchXMLVersionNumber;
 
-@implementation TidyTests
+//! Project version string for TouchXML.
+FOUNDATION_EXPORT const unsigned char TouchXMLVersionString[];
 
-- (void)test_basicXMLTest
-{
-NSError *theError = NULL;
-CXMLDocument *theXMLDocument = [[[CXMLDocument alloc] initWithXMLString:@"<foo></bar>" options:CXMLDocumentTidyXML error:&theError] autorelease];
-STAssertNotNil(theXMLDocument, NULL);
-STAssertNil(theError, NULL);
-STAssertNotNil([theXMLDocument rootElement], NULL);
-STAssertEquals([theXMLDocument rootElement], [theXMLDocument rootElement], NULL);
-STAssertEqualObjects([[theXMLDocument rootElement] name], @"foo", NULL);
-}
+// In this header, you should import all the public headers of your framework using statements like #import <TouchXML/PublicHeader.h>
 
-@end
+#import "CXMLDocument.h"
+#import "CXMLDocument_CreationExtensions.h"
+#import "CXMLElement.h"
+#import "CXMLElement_CreationExtensions.h"
+#import "CXMLElement_ElementTreeExtensions.h"
+#import "CXMLNode.h"
+#import "CXMLNode_CreationExtensions.h"
+#import "CXMLNode_XPathExtensions.h"
+#import "CXMLUnsupportedNode.h"

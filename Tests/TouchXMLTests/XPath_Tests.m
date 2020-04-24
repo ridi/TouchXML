@@ -31,9 +31,7 @@
 
 #import "XPath_Tests.h"
 
-#import "CXMLDocument.h"
-#import "CXMLElement.h"
-#import "CXMLNode_XPathExtensions.h"
+@import TouchXML;
 
 @implementation XPath_Tests
 

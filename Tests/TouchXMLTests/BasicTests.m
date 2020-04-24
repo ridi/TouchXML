@@ -31,8 +31,7 @@
 
 #import "BasicTests.h"
 
-#import "CXMLDocument.h"
-#import "CXMLElement.h"
+@import TouchXML;
 
 @implementation BasicTests
 

@@ -33,8 +33,8 @@
 
 #import "CXMLDocument.h"
 #import "CXMLElement.h"
-#import "CXMLNode_PrivateExtensions.h"
-#import "CXMLDocument_PrivateExtensions.h"
+#import "../CXMLNode_PrivateExtensions.h"
+#import "../CXMLDocument_PrivateExtensions.h"
 #import "CXMLNamespaceNode.h"
 
 @implementation CXMLNode (CXMLNode_CreationExtensions)

@@ -31,7 +31,8 @@
 
 #import "EncodingTests.h"
 
-#import "CXMLDocument.h"
+@import Foundation;
+@import TouchXML;
 
 static NSString *xmlUTF8Str = @"\n\
 <html> \n\
