@@ -57,7 +57,7 @@ return(self);
         return nil;
 
     if (inLibXMLNode->_private)
-        return((__bridge id)inLibXMLNode->_private);
+        return (__bridge id)(inLibXMLNode->_private);
 
         Class theClass = [self nodeClassForLibXMLNode:inLibXMLNode];
 
@@ -65,13 +65,13 @@ return(self);
 
 
     if (inLibXMLNode->doc != NULL) {
-        CXMLDocument *theXMLDocument = (__bridge CXMLDocument *)inLibXMLNode->doc->_private;
+        CXMLDocument *theXMLDocument = (__bridge CXMLDocument *)(inLibXMLNode->doc->_private);
         if (theXMLDocument != NULL) {
             NSAssert([theXMLDocument isKindOfClass:[CXMLDocument class]] == YES, @"TODO");
 
             [[theXMLDocument nodePool] addObject:theNode];
 
-            theNode->_node->_private = (__bridge_retained void *)theNode;
+            theNode->_node->_private = (__bridge_retained void *)(theNode);
         }
     }
     return(theNode);
@@ -110,7 +110,7 @@ return(_node);
     {
     if (_node)
         {
-        if (_node->_private == (__bridge void *)self)
+        if (_node->_private == (__bridge void *)(self))
             _node->_private = NULL;
 
         if (_freeNodeOnRelease)
