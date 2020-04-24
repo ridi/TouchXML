@@ -71,7 +71,7 @@ return(self);
 
             [[theXMLDocument nodePool] addObject:theNode];
 
-            theNode->_node->_private = (__bridge void *)theNode;
+            theNode->_node->_private = (__bridge_retained void *)theNode;
         }
     }
     return(theNode);
